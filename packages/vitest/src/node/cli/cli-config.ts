@@ -687,7 +687,7 @@ export const cliOptionsConfig: VitestCLIOptions = {
   outputJson: null,
 }
 
-export const benchCliOptionsConfig: Pick<VitestCLIOptions, 'compare' | 'outputJson'> = {
+export const benchCliOptionsConfig: Pick<VitestCLIOptions, 'compare' | 'outputJson' | 'testNamePattern'> = {
   compare: {
     description: 'benchmark output file to compare against',
     argument: '<filename>',
@@ -695,5 +695,10 @@ export const benchCliOptionsConfig: Pick<VitestCLIOptions, 'compare' | 'outputJs
   outputJson: {
     description: 'benchmark output file',
     argument: '<filename>',
+  },
+  testNamePattern: {
+    description: 'Run benchmarks with full names matching the specified regexp pattern',
+    argument: '<pattern>',
+    shorthand: 't',
   },
 }
